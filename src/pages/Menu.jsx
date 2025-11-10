@@ -10,7 +10,7 @@ const Menu = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center gap-3">
-                <img className="h-8 w-8" alt="Scoop Theory logo" src="/logo.png"/>
+                <img className="h-8 w-8 rounded-full" alt="Scoop Theory logo" src="/logo.png"/>
                 <h1 className="text-2xl font-bold tracking-tight text-text-light dark:text-text-dark">Scoop Theory</h1>
               </Link>
             </div>
@@ -96,7 +96,7 @@ const Menu = () => {
           <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center gap-3">
-                <img className="h-8 w-8" alt="Scoop Theory logo" src="/logo.png"/>
+                <img className="h-8 w-8 rounded-full" alt="Scoop Theory logo" src="/logo.png"/>
                 <h1 className="text-2xl font-bold tracking-tight text-text-light dark:text-text-dark">Scoop Theory</h1>
               </Link>
             </div>

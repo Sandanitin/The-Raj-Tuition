@@ -17,7 +17,7 @@ function App() {
           <div className="flex items-center justify-between whitespace-nowrap px-4 sm:px-10 py-3 max-w-6xl w-full">
             <div className="flex items-center gap-2">
               <Link to="/" className="flex items-center gap-2 text-text-primary dark:text-text-dark">
-                <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-text-dark font-bold">ST</div>
+                <img src="/logo.png" alt="Scoop Theory" className="h-8 w-8 rounded-full object-cover" />
                 <h2 className="text-text-primary dark:text-text-dark text-xl font-bold leading-tight tracking-tight">Scoop Theory</h2>
               </Link>
             </div>
@@ -114,9 +114,9 @@ function App() {
                 </div>
                 
                 <div className="relative z-10 flex flex-col items-center justify-center text-center p-4">
-                  <h1 className="text-text-dark dark:text-text-light text-5xl md:text-7xl font-black tracking-tighter leading-tight drop-shadow-md">
+                  {/* <h1 className="text-text-dark dark:text-text-light text-5xl md:text-7xl font-black tracking-tighter leading-tight drop-shadow-md">
                     Scoop Theory
-                  </h1>
+                  </h1> */}
                   <h2 className="text-text-dark dark:text-text-light mt-2 text-lg md:text-xl font-normal leading-normal drop-shadow-sm">
                     Where Every Scoop Tells a Story.
                   </h2>

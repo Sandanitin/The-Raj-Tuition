@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
-              <img className="h-8 w-auto" src="/logo.png" alt="Scoop Theory" />
+              <img className="h-8 w-auto rounded-full" src="/logo.png" alt="Scoop Theory" />
               <span className="ml-2 text-xl font-bold text-text-dark dark:text-text-light">Scoop Theory</span>
             </Link>
           </div>
