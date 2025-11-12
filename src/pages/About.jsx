@@ -98,7 +98,7 @@ const About = () => {
           </div>
           <div className="w-full h-80 md:h-[500px] rounded-xl overflow-hidden shadow-lg md:order-1">
             <ImageWithFallback 
-              src={`${window.location.origin}/images/cafe_interior.jpg`} 
+              src="/images/cafe_interior.jpg" 
               alt="Cafe interior"
               className="w-full h-full object-cover"
               fallbackText="Our cozy cafe interior"

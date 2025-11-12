@@ -72,7 +72,7 @@ const Menu = () => {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <div 
                     className="h-96 w-full bg-cover bg-center" 
-                    style={{ backgroundImage: 'url(public/images/uji_matcha.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/uji_matcha.jpg)' }}
                   ></div>
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark/50 to-transparent"></div>
                 </div>

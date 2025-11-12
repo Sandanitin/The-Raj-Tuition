@@ -139,7 +139,7 @@ function App() {
                       <div className="lg:w-1/2 w-full">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                           <img 
-                            src="public/images/taro_milk_tea.jpg" 
+                            src="/images/taro_milk_tea.jpg" 
                             alt="Crafting premium ice cream" 
                             className="w-full h-auto object-cover"
                           />
@@ -208,7 +208,7 @@ function App() {
                       <div className="lg:w-1/2 w-full">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                           <img 
-                            src="public/images/chocolate_fudge.jpg" 
+                            src="/images/chocolate_fudge.jpg" 
                             alt="Sustainable ice cream production" 
                             className="w-full h-auto object-cover"
                           />
