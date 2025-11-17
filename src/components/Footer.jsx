@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-indigo-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">123 Education St, London, UK</span>
+                <span className="text-gray-400">170-172 Drews Lane<br />Birmingham<br />B8 2SL</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 text-indigo-400 mr-3 mt-0.5 flex-shrink-0" />
