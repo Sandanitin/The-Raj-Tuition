@@ -27,7 +27,7 @@ const Navbar = () => {
                   alt="The Raj Tuition Logo" 
                   className="h-16 w-auto mr-3"
                 />
-                <span className="text-xl font-bold text-gray-800 dark:text-white">The Raj Tuition</span>
+                <span className="text-xl font-bold text-gray-800 dark:text-white">Maths and Science Club</span>
               </div>
             </Link>
           </div>
