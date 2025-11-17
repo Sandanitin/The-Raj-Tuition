@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'react-feather';
-import Button from './ui/Button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
