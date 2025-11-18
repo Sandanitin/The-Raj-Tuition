@@ -228,7 +228,7 @@ const Home = () => {
                   variant="secondary" 
                   size="lg" 
                   onClick={() => handleNavigation('/tutoring')}
-                  className=" text-blue-700 hover:bg-blue-50 transform hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+                  className="bg-gradient-to-r from-blue-400 to-blue-600 text-white hover:from-blue-500 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-xl font-semibold"
                 >
                   Start Learning Today
                 </Button>
@@ -327,7 +327,7 @@ const Home = () => {
                   variant="secondary"
                   size="lg" 
                   onClick={() => handleNavigation('/contact?consultation=true')}
-                  className="mt-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+                  className="mt-4 bg-gradient-to-r from-blue-400 to-blue-600 text-white hover:from-blue-500 hover:to-blue-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-xl font-semibold"
                 >
                   Book a Free Consultation
                 </Button>

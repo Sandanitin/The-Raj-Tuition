@@ -24,6 +24,29 @@ export default {
           light: 'var(--background-light)',
           dark: 'var(--background-dark)'
         },
+        // Ensure indigo and blue colors are properly defined
+        indigo: {
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+        },
+        blue: {
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
         // Alias for backward compatibility
         'text-dark': 'var(--text-dark)',
         'text-light': 'var(--text-light)',
@@ -45,7 +68,6 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/container-queries'),
+    // These plugins are now imported in postcss.config.js
   ],
 }
