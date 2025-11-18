@@ -109,8 +109,8 @@ const FAQ = () => {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400">Frequently Asked Questions</h2>
+          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
             Everything you need to know about our tutoring services
           </p>
         </div>
@@ -324,9 +324,10 @@ const Home = () => {
               </ul>
               <div className="mt-8">
                 <Button 
+                  variant="secondary"
                   size="lg" 
                   onClick={() => handleNavigation('/contact?consultation=true')}
-                  className="mt-4"
+                  className="mt-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Book a Free Consultation
                 </Button>
