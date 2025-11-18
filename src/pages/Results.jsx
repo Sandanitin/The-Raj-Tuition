@@ -9,16 +9,16 @@ const Results = () => {
   const resultsData = {
     'GCSE': {
       '2024': [
-        { name: 'Student H', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student I', physics: '9', chemistry: '8', biology: '9', mathematics: '9' },
-        { name: 'Student AD', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student AE', physics: '9', chemistry: '9', biology: '8', mathematics: '9' },
-        { name: 'Student AF', physics: '8', chemistry: '8', biology: '8', mathematics: '9' },
-        { name: 'Student AG', physics: '9', chemistry: '9', biology: '9', mathematics: '8' },
-        { name: 'Student AH', physics: '8', chemistry: '9', biology: '8', mathematics: '8' },
-        { name: 'Student AI', physics: '9', chemistry: '8', biology: '8', mathematics: '8' },
-        { name: 'Student AJ', physics: '8', chemistry: '8', biology: '8', mathematics: '8' },
-        { name: 'Student AK', physics: '9', chemistry: '7', biology: '8', mathematics: '8' }
+        { name: 'Student K', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student L', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student M', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student N', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student O', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student P', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student Q', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student R', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student S', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student T', physics: '9', chemistry: '9', biology: '9', mathematics: '9' }
       ],
       '2023': [
         { name: 'AJ', chemistry: '9', biology: '9', physics: '9', mathematics: '9' },
@@ -97,28 +97,76 @@ const Results = () => {
     },
     'A Level': {
       '2024': [
-        { name: 'Student J', chemistry: 'A*', biology: 'A*', mathematics: 'A*' },
-        { name: 'Student K', chemistry: 'A', biology: 'A', mathematics: 'A' },
-        { name: 'Student V', chemistry: 'A*', biology: 'A*', mathematics: 'A' },
-        { name: 'Student W', chemistry: 'A', biology: 'A*', mathematics: 'A*' },
-        { name: 'Student X', chemistry: 'A', biology: 'A', mathematics: 'B' },
-        { name: 'Student Y', chemistry: 'B', biology: 'A', mathematics: 'A' },
-        { name: 'Student Z', chemistry: 'A*', biology: 'A', mathematics: 'A*' },
-        { name: 'Student AA', chemistry: 'A', biology: 'B', mathematics: 'A' },
-        { name: 'Student AB', chemistry: 'B', biology: 'B', mathematics: 'B' },
-        { name: 'Student AC', chemistry: 'A*', biology: 'A', mathematics: 'A' },
+        { name: 'Student A', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student B', chemistry: 'A*', biology: 'A' },
+        { name: 'Student C', chemistry: 'A', biology: 'A*' },
+        { name: 'Student D', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student E', chemistry: 'A', biology: 'A' },
+        { name: 'Student F', chemistry: 'B', biology: 'A' },
+        { name: 'Student G', chemistry: 'A*', biology: 'A' },
+        { name: 'Student H', chemistry: 'A', biology: 'B' },
+        { name: 'Student I', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student J', chemistry: 'B', biology: 'B' }
+      ],
+      '2023': [
+        { name: 'Student K', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student L', chemistry: 'A', biology: 'A*' },
+        { name: 'Student M', chemistry: 'A*', biology: 'A' },
+        { name: 'Student N', chemistry: 'A', biology: 'A' },
+        { name: 'Student O', chemistry: 'B', biology: 'A' },
+        { name: 'Student P', chemistry: 'A*', biology: 'A' },
+        { name: 'Student Q', chemistry: 'A', biology: 'B' },
+        { name: 'Student R', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student S', chemistry: 'B', biology: 'B' },
+        { name: 'Student T', chemistry: 'A', biology: 'A' }
+      ],
+      '2022': [
+        { name: 'Student U', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student V', chemistry: 'A', biology: 'A*' },
+        { name: 'Student W', chemistry: 'A*', biology: 'A' },
+        { name: 'Student X', chemistry: 'A', biology: 'A' },
+        { name: 'Student Y', chemistry: 'B', biology: 'A' },
+        { name: 'Student Z', chemistry: 'A*', biology: 'A' },
+        { name: 'Student AA', chemistry: 'A', biology: 'B' },
+        { name: 'Student AB', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AC', chemistry: 'B', biology: 'B' },
+        { name: 'Student AD', chemistry: 'A', biology: 'A' }
+      ],
+      '2021': [
+        { name: 'Student AE', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AF', chemistry: 'A', biology: 'A*' },
+        { name: 'Student AG', chemistry: 'A*', biology: 'A' },
+        { name: 'Student AH', chemistry: 'A', biology: 'A' },
+        { name: 'Student AI', chemistry: 'B', biology: 'A' },
+        { name: 'Student AJ', chemistry: 'A*', biology: 'A' },
+        { name: 'Student AK', chemistry: 'A', biology: 'B' },
+        { name: 'Student AL', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AM', chemistry: 'B', biology: 'B' },
+        { name: 'Student AN', chemistry: 'A', biology: 'A' }
       ],
       '2020': [
-        { name: 'Student L', chemistry: 'A*', biology: 'A*', mathematics: 'A*' },
-        { name: 'Student M', chemistry: 'A', biology: 'A*', mathematics: 'A' },
-        { name: 'Student N', chemistry: 'A', biology: 'A', mathematics: 'A' },
-        { name: 'Student O', chemistry: 'B', biology: 'A', mathematics: 'B' },
-        { name: 'Student P', chemistry: 'A*', biology: 'A', mathematics: 'A*' },
-        { name: 'Student Q', chemistry: 'A', biology: 'B', mathematics: 'A' },
-        { name: 'Student R', chemistry: 'A*', biology: 'A*', mathematics: 'A' },
-        { name: 'Student S', chemistry: 'B', biology: 'B', mathematics: 'B' },
-        { name: 'Student T', chemistry: 'A', biology: 'A', mathematics: 'B' },
-        { name: 'Student U', chemistry: 'A*', biology: 'A', mathematics: 'A' }
+        { name: 'Student AO', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AP', chemistry: 'A', biology: 'A*' },
+        { name: 'Student AQ', chemistry: 'A*', biology: 'A' },
+        { name: 'Student AR', chemistry: 'A', biology: 'A' },
+        { name: 'Student AS', chemistry: 'B', biology: 'A' },
+        { name: 'Student AT', chemistry: 'A*', biology: 'A' },
+        { name: 'Student AU', chemistry: 'A', biology: 'B' },
+        { name: 'Student AV', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AW', chemistry: 'B', biology: 'B' },
+        { name: 'Student AX', chemistry: 'A', biology: 'A' }
+      ],
+      '2019': [
+        { name: 'Student AY', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student AZ', chemistry: 'A', biology: 'A*' },
+        { name: 'Student BA', chemistry: 'A*', biology: 'A' },
+        { name: 'Student BB', chemistry: 'A', biology: 'A' },
+        { name: 'Student BC', chemistry: 'B', biology: 'A' },
+        { name: 'Student BD', chemistry: 'A*', biology: 'A' },
+        { name: 'Student BE', chemistry: 'A', biology: 'B' },
+        { name: 'Student BF', chemistry: 'A*', biology: 'A*' },
+        { name: 'Student BG', chemistry: 'B', biology: 'B' },
+        { name: 'Student BH', chemistry: 'A', biology: 'A' }
       ]
     }
   };
