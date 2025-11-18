@@ -90,8 +90,8 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   {[
                     { value: '98%', label: 'Success Rate' },
-                    { value: '15+', label: 'Expert Tutors' },
-                    { value: '1000+', label: 'Students Helped' },
+                    { value: '3+', label: 'Expert Tutors' },
+                    { value: '500+', label: 'Students Helped' },
                     { value: '5', label: 'Subjects Covered' }
                   ].map((stat, index) => (
                     <div key={index} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
