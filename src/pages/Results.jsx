@@ -1,6 +1,6 @@
 // src/pages/Results.jsx
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, BarChart2, Award } from 'react-feather';
+import { ArrowRight, BarChart2, Award } from 'react-feather';
 
 const Results = () => {
   const [activeYear, setActiveYear] = useState('2024');
@@ -200,18 +200,18 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-16">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-12">
+      <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-12 dark:from-indigo-800 dark:to-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">GCSE Results</h1>
               <p className="text-blue-100 text-lg">Student achievements in Chemistry, Biology, and Physics</p>
             </div>
-            <div className="hidden md:flex items-center space-x-4 bg-white/10 p-3 rounded-lg">
-              <BarChart2 className="h-8 w-8 text-blue-200" />
+            <div className="hidden md:flex items-center space-x-4 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+              <BarChart2 className="h-8 w-8 text-blue-100" />
               <div>
-                <p className="text-sm text-blue-200">Total Students</p>
-                <p className="text-2xl font-bold">45+</p>
+                <p className="text-sm text-blue-100">Total Students</p>
+                <p className="text-2xl font-bold text-white">45+</p>
               </div>
             </div>
           </div>
@@ -231,10 +231,10 @@ const Results = () => {
                   const levelYears = Object.keys(resultsData[level] || {});
                   setActiveYear(levelYears[0] || '');
                 }}
-                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
                   activeLevel === level
-                    ? 'bg-indigo-600 text-white'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    ? 'bg-indigo-600 text-white shadow-md'
+                    : 'text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 {level}
@@ -249,10 +249,10 @@ const Results = () => {
                 <button
                   key={year}
                   onClick={() => setActiveYear(year)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
                     activeYear === year
-                      ? 'bg-indigo-600 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                      ? 'bg-indigo-600 text-white shadow-md'
+                      : 'text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
                   {year} {activeLevel} Results
