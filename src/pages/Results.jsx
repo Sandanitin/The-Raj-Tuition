@@ -4,102 +4,115 @@ import { ArrowLeft, ArrowRight, BarChart2, Award } from 'react-feather';
 
 const Results = () => {
   const [activeYear, setActiveYear] = useState('2024');
+  const [activeLevel, setActiveLevel] = useState('GCSE');
 
   const resultsData = {
-    '2019': [
-      { name: 'AJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'BJ', chemistry: '8', biology: '9', physics: '8' },
-      { name: 'CJ', chemistry: '8', biology: '8', physics: '7' },
-      { name: 'DJ', chemistry: '7', biology: '6', physics: '6' },
-      { name: 'Yashwanth', chemistry: '10', biology: '10', physics: '10' },
-      { name: 'EJ', chemistry: '9', biology: '9', physics: '9' }
-    ],
-    '2020': [
-      { name: 'FJ', chemistry: '9', biology: '8', physics: '9' },
-      { name: 'GJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'HJ', chemistry: '9', biology: '8', physics: '9' },
-      { name: 'IJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'JJ', chemistry: '7', biology: '7', physics: '7' },
-      { name: 'KJ', chemistry: '8', biology: '8', physics: '7' },
-      { name: 'LJ', chemistry: '8', biology: '9', physics: '8' }
-    ],
-    '2021': [
-      { name: 'MJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'NJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: '0J', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'SJ', chemistry: '9', biology: '9', physics: '8' },
-      { name: 'PJ', chemistry: '9', biology: '9', physics: '8' },
-      { name: 'QJ', chemistry: '8', biology: '8', physics: '8', notes: 'COMBINED SCIENCE - 8,8' }
-    ],
-    '2022': [
-      { name: 'RJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'SJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'TJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'UJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'VJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'WJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'XJ', chemistry: '9', biology: '9', physics: '8' },
-      { name: 'YJ', chemistry: '9', biology: '8', physics: '9' },
-      { name: 'ZJ', chemistry: '9', biology: '8', physics: '8' },
-      { name: 'AAJ', chemistry: '9', biology: '8', physics: '8' },
-      { name: 'ABJ', chemistry: '9', biology: '8', physics: '7' },
-      { name: 'ACJ', chemistry: '8', biology: '8', physics: '8' },
-      { name: 'ADJ', chemistry: '8', biology: '7', physics: '7' },
-      { name: 'AEJ', chemistry: '7', biology: '7', physics: '6' },
-      { name: 'AFJ', chemistry: '7', biology: '6', physics: '6' },
-      { name: 'AGJ', chemistry: '6', biology: '7', physics: '6' },
-      { name: 'AHJ', chemistry: '9', biology: '8', physics: '8', notes: 'COMBINED SCIENCE 9,8' },
-      { name: 'AIJ', chemistry: '8', biology: '7', physics: '7', notes: 'COMBINED SCIENCE 8,7' },
-      { name: 'AJJ', chemistry: '6.5', biology: '6.5', physics: '6.5', notes: 'COMBINED SCIENCE 6.5' }
-    ],
-    '2023': [
-      { name: 'AKJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'ALJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'AMJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'ANJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'AOJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'APJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'AQJ', chemistry: '9', biology: '9', physics: '8' },
-      { name: 'ARJ', chemistry: '9', biology: '8', physics: '9' },
-      { name: 'ASJ', chemistry: '8', biology: '9', physics: '8' },
-      { name: 'ATJ', chemistry: '8', biology: '8', physics: '8' },
-      { name: 'AUJ', chemistry: '8', biology: '8', physics: '8' },
-      { name: 'AVJ', chemistry: '8', biology: '7', physics: '8' },
-      { name: 'AWJ', chemistry: '7', biology: '7', physics: '7' },
-      { name: 'AXJ', chemistry: '7', biology: '6', physics: '6' },
-      { name: 'AYJ', chemistry: '7', biology: '6', physics: '7' },
-      { name: 'AZJ', chemistry: '9', biology: '8', physics: '8', notes: 'COMBINED SCIENCE 9,8' },
-      { name: 'BAJ', chemistry: '8', biology: '7', physics: '7', notes: 'COMBINED SCIENCE 8,7' },
-      { name: 'CAJ', chemistry: '5', biology: '5', physics: '5', notes: 'COMBINED SCIENCE 5,5' }
-    ],
-    '2024': [
-      { name: 'DAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'EAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'FAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'GAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'HAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'IAJ', chemistry: '9', biology: '9', physics: '9' },
-      { name: 'JAJ', chemistry: '9', biology: '8', physics: '9' },
-      { name: 'KAJ', chemistry: '9', biology: '8', physics: '8' },
-      { name: 'LAJ', chemistry: '9', biology: '9', physics: '8' },
-      { name: 'MAJ', chemistry: '7', biology: '8', physics: '8' },
-      { name: 'NAJ', chemistry: '8', biology: '7', physics: '8' },
-      { name: 'OAJ', chemistry: '7', biology: '7', physics: '8' },
-      { name: 'PAJ', chemistry: '7', biology: '6', physics: '6' },
-      { name: 'QAJ', chemistry: '6', biology: '6', physics: '7' },
-      { name: 'RAJ', chemistry: '9', biology: '9', physics: '9', notes: 'COMBINED SCIENCE 9,9' },
-      { name: 'SAJ', chemistry: '9', biology: '8', physics: '8', notes: 'COMBINED SCIENCE 9,8' }
-    ]
+    'Year 8': {
+      '2024': [
+        { name: 'Student A', mathematics: 'A*', science: 'A' },
+        { name: 'Student B', mathematics: 'A', science: 'A' },
+        { name: 'Student C', mathematics: 'B', science: 'A*' },
+      ]
+    },
+    'Year 9': {
+      '2024': [
+        { name: 'Student D', physics: 'A', chemistry: 'A', biology: 'A*', mathematics: 'A*' },
+        { name: 'Student E', physics: 'A*', chemistry: 'A', biology: 'A', mathematics: 'A' },
+      ]
+    },
+    'Year 10': {
+      '2024': [
+        { name: 'Student F', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student G', physics: '8', chemistry: '9', biology: '8', mathematics: '9' },
+      ]
+    },
+    'GCSE': {
+      '2024': [
+        { name: 'Student H', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
+        { name: 'Student I', physics: '9', chemistry: '8', biology: '9', mathematics: '9' },
+      ],
+      '2023': [
+        { name: 'AJ', chemistry: '9', biology: '9', physics: '9', mathematics: '9' },
+        { name: 'BJ', chemistry: '8', biology: '9', physics: '8', mathematics: '9' },
+      ],
+      '2022': [
+        { name: 'RJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'SJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'TJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'UJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'VJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'WJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'XJ', chemistry: '9', biology: '9', physics: '8' },
+        { name: 'YJ', chemistry: '9', biology: '8', physics: '9' },
+        { name: 'ZJ', chemistry: '9', biology: '8', physics: '8' },
+        { name: 'AAJ', chemistry: '9', biology: '8', physics: '8' },
+        { name: 'ABJ', chemistry: '9', biology: '8', physics: '7' },
+        { name: 'ACJ', chemistry: '8', biology: '8', physics: '8' },
+        { name: 'ADJ', chemistry: '8', biology: '7', physics: '7' },
+        { name: 'AEJ', chemistry: '7', biology: '7', physics: '6' },
+        { name: 'AFJ', chemistry: '7', biology: '6', physics: '6' },
+        { name: 'AGJ', chemistry: '6', biology: '7', physics: '6' },
+        { name: 'AHJ', chemistry: '9', biology: '8', physics: '8', notes: 'COMBINED SCIENCE 9,8' },
+        { name: 'AIJ', chemistry: '8', biology: '7', physics: '7', notes: 'COMBINED SCIENCE 8,7' },
+        { name: 'AJJ', chemistry: '6.5', biology: '6.5', physics: '6.5', notes: 'COMBINED SCIENCE 6.5' }
+      ],
+      '2021': [
+        { name: 'MJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'NJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: '0J', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'SJ', chemistry: '9', biology: '9', physics: '8' },
+        { name: 'PJ', chemistry: '9', biology: '9', physics: '8' },
+        { name: 'QJ', chemistry: '8', biology: '8', physics: '8', notes: 'COMBINED SCIENCE - 8,8' }
+      ],
+      '2020': [
+        { name: 'FJ', chemistry: '9', biology: '8', physics: '9' },
+        { name: 'GJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'HJ', chemistry: '9', biology: '8', physics: '9' },
+        { name: 'IJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'JJ', chemistry: '7', biology: '7', physics: '7' },
+        { name: 'KJ', chemistry: '8', biology: '8', physics: '7' },
+        { name: 'LJ', chemistry: '8', biology: '9', physics: '8' }
+      ],
+      '2019': [
+        { name: 'AJ', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'BJ', chemistry: '8', biology: '9', physics: '8' },
+        { name: 'CJ', chemistry: '8', biology: '8', physics: '7' },
+        { name: 'DJ', chemistry: '7', biology: '6', physics: '6' },
+        { name: 'Yashwanth', chemistry: '10', biology: '10', physics: '10' },
+        { name: 'EJ', chemistry: '9', biology: '9', physics: '9' }
+      ]
+    },
+    'A Level': {
+      '2024': [
+        { name: 'Student J', chemistry: 'A*', biology: 'A*', mathematics: 'A*' },
+        { name: 'Student K', chemistry: 'A', biology: 'A', mathematics: 'A' },
+      ]
+    }
   };
 
-  const years = Object.keys(resultsData).sort((a, b) => b - a);
+  const years = activeLevel === 'GCSE' 
+    ? Object.keys(resultsData['GCSE'] || {}).sort((a, b) => b - a)
+    : Object.keys(resultsData[activeLevel] || {}).sort((a, b) => b - a);
 
   const getGradeColor = (grade) => {
+    if (!grade) return 'bg-gray-100 text-gray-800';
+    
+    // Handle numeric grades (9-1)
     const numericGrade = parseFloat(grade);
-    if (isNaN(numericGrade)) return 'bg-gray-100 text-gray-800';
-    if (numericGrade >= 9) return 'bg-green-100 text-green-800';
-    if (numericGrade >= 7) return 'bg-blue-100 text-blue-800';
-    if (numericGrade >= 5) return 'bg-yellow-100 text-yellow-800';
+    if (!isNaN(numericGrade)) {
+      if (numericGrade >= 9) return 'bg-green-100 text-green-800';
+      if (numericGrade >= 7) return 'bg-blue-100 text-blue-800';
+      if (numericGrade >= 5) return 'bg-yellow-100 text-yellow-800';
+      return 'bg-red-100 text-red-800';
+    }
+    
+    // Handle letter grades (A*, A, B, etc.)
+    const letterGrade = grade.toString().toUpperCase();
+    if (letterGrade === 'A*') return 'bg-purple-100 text-purple-800';
+    if (letterGrade === 'A') return 'bg-green-100 text-green-800';
+    if (letterGrade === 'B') return 'bg-blue-100 text-blue-800';
+    if (letterGrade === 'C') return 'bg-yellow-100 text-yellow-800';
+    if (letterGrade === 'D' || letterGrade === 'E') return 'bg-orange-100 text-orange-800';
     return 'bg-red-100 text-red-800';
   };
 
@@ -124,24 +137,48 @@ const Results = () => {
         </div>
       </div>
 
-      {/* Year Selector */}
+      {/* Level and Year Selector */}
       <div className="bg-white dark:bg-gray-800 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 space-x-2">
-            {years.map((year) => (
+          {/* Level Selector */}
+          <div className="flex overflow-x-auto py-4 space-x-2 border-b border-gray-200 dark:border-gray-700">
+            {['Year 8', 'Year 9', 'Year 10', 'GCSE', 'A Level'].map((level) => (
               <button
-                key={year}
-                onClick={() => setActiveYear(year)}
+                key={level}
+                onClick={() => {
+                  setActiveLevel(level);
+                  const levelYears = Object.keys(resultsData[level] || {});
+                  setActiveYear(levelYears[0] || '');
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
-                  activeYear === year
+                  activeLevel === level
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >
-                {year} Results
+                {level}
               </button>
             ))}
           </div>
+          
+          {/* Year Selector */}
+          {years.length > 0 && (
+            <div className="flex overflow-x-auto py-4 space-x-2">
+              {years.map((year) => (
+                <button
+                  key={year}
+                  onClick={() => setActiveYear(year)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${
+                    activeYear === year
+                      ? 'bg-indigo-600 text-white'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  {year} {activeLevel} Results
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -150,7 +187,7 @@ const Results = () => {
         <div className="bg-white dark:bg-gray-800 shadow overflow-hidden sm:rounded-lg">
           <div className="px-4 py-5 sm:px-6 bg-gray-50 dark:bg-gray-700">
             <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-              GCSE Results - {activeYear}
+              {activeLevel} Results - {activeYear}
             </h3>
           </div>
           <div className="overflow-x-auto">
@@ -163,28 +200,47 @@ const Results = () => {
                   >
                     Student
                   </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
-                  >
-                    Chemistry
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
-                  >
-                    Biology
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider"
-                  >
-                    Physics
-                  </th>
+                  {activeLevel === 'Year 8' ? (
+                    <>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Mathematics
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Science
+                      </th>
+                    </>
+                  ) : activeLevel === 'A Level' ? (
+                    <>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Chemistry
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Biology
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Mathematics
+                      </th>
+                    </>
+                  ) : (
+                    <>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Physics
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Chemistry
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Biology
+                      </th>
+                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                        Mathematics
+                      </th>
+                    </>
+                  )}
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                {resultsData[activeYear]?.map((student, index) => (
+                {resultsData[activeLevel] && resultsData[activeLevel][activeYear] && resultsData[activeLevel][activeYear].map((student, index) => (
                   <tr
                     key={index}
                     className="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
@@ -203,17 +259,97 @@ const Results = () => {
                         </div>
                       </div>
                     </td>
-                    {['chemistry', 'biology', 'physics'].map((subject) => (
-                      <td key={subject} className="px-6 py-4 whitespace-nowrap text-center">
-                        <span
-                          className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
-                            student[subject]
-                          )}`}
-                        >
-                          {student[subject]}
-                        </span>
-                      </td>
-                    ))}
+                    {activeLevel === 'Year 8' ? (
+                      <>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.mathematics
+                            )}`}
+                          >
+                            {student.mathematics}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.science
+                            )}`}
+                          >
+                            {student.science}
+                          </span>
+                        </td>
+                      </>
+                    ) : activeLevel === 'A Level' ? (
+                      <>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.chemistry
+                            )}`}
+                          >
+                            {student.chemistry}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.biology
+                            )}`}
+                          >
+                            {student.biology}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.mathematics
+                            )}`}
+                          >
+                            {student.mathematics}
+                          </span>
+                        </td>
+                      </>
+                    ) : (
+                      <>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.physics
+                            )}`}
+                          >
+                            {student.physics}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.chemistry
+                            )}`}
+                          >
+                            {student.chemistry}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.biology
+                            )}`}
+                          >
+                            {student.biology}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center">
+                          <span
+                            className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getGradeColor(
+                              student.mathematics
+                            )}`}
+                          >
+                            {student.mathematics}
+                          </span>
+                        </td>
+                      </>
+                    )}
                   </tr>
                 ))}
               </tbody>

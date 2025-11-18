@@ -228,7 +228,7 @@ const Home = () => {
                   variant="secondary" 
                   size="lg" 
                   onClick={() => handleNavigation('/tutoring')}
-                  className="bg-yellow-400 hover:bg-yellow-300 text-blue-900 transform hover:scale-105 transition-transform"
+                  className="bg-blue-600 hover:bg-blue-500 text-white transform hover:scale-105 transition-transform"
                 >
                   Start Learning Today
                 </Button>
