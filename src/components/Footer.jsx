@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock } from 'react-feather';
+import { Mail, Phone, MapPin } from 'react-feather';
 
 const Footer = () => {
   return (
@@ -53,10 +53,6 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-indigo-400 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400">170-172 Drews Lane<br />Birmingham<br />B8 2SL</span>
-              </li>
-              <li className="flex items-start">
-                <Clock className="h-5 w-5 text-indigo-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">Mon-Fri: 9:00 AM - 7:00 PM</span>
               </li>
             </ul>
           </div>
