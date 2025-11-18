@@ -7,25 +7,6 @@ const Results = () => {
   const [activeLevel, setActiveLevel] = useState('GCSE');
 
   const resultsData = {
-    'Year 8': {
-      '2024': [
-        { name: 'Student A', mathematics: 'A*', science: 'A' },
-        { name: 'Student B', mathematics: 'A', science: 'A' },
-        { name: 'Student C', mathematics: 'B', science: 'A*' },
-      ]
-    },
-    'Year 9': {
-      '2024': [
-        { name: 'Student D', physics: 'A', chemistry: 'A', biology: 'A*', mathematics: 'A*' },
-        { name: 'Student E', physics: 'A*', chemistry: 'A', biology: 'A', mathematics: 'A' },
-      ]
-    },
-    'Year 10': {
-      '2024': [
-        { name: 'Student F', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student G', physics: '8', chemistry: '9', biology: '8', mathematics: '9' },
-      ]
-    },
     'GCSE': {
       '2024': [
         { name: 'Student H', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
@@ -78,7 +59,7 @@ const Results = () => {
         { name: 'BJ', chemistry: '8', biology: '9', physics: '8' },
         { name: 'CJ', chemistry: '8', biology: '8', physics: '7' },
         { name: 'DJ', chemistry: '7', biology: '6', physics: '6' },
-        { name: 'Yashwanth', chemistry: '10', biology: '10', physics: '10' },
+      
         { name: 'EJ', chemistry: '9', biology: '9', physics: '9' }
       ]
     },
@@ -86,6 +67,12 @@ const Results = () => {
       '2024': [
         { name: 'Student J', chemistry: 'A*', biology: 'A*', mathematics: 'A*' },
         { name: 'Student K', chemistry: 'A', biology: 'A', mathematics: 'A' },
+      ],
+      '2020': [
+        { name: 'Student L', chemistry: 'A*', biology: 'A*', mathematics: 'A*' },
+        { name: 'Student M', chemistry: 'A', biology: 'A*', mathematics: 'A' },
+        { name: 'Student N', chemistry: 'A', biology: 'A', mathematics: 'A' },
+        { name: 'Student O', chemistry: 'B', biology: 'A', mathematics: 'B' }
       ]
     }
   };
@@ -142,7 +129,7 @@ const Results = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Level Selector */}
           <div className="flex overflow-x-auto py-4 space-x-2 border-b border-gray-200 dark:border-gray-700">
-            {['Year 8', 'Year 9', 'Year 10', 'GCSE', 'A Level'].map((level) => (
+            {['GCSE', 'A Level'].map((level) => (
               <button
                 key={level}
                 onClick={() => {
