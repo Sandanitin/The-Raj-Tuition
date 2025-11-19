@@ -9,28 +9,27 @@ const Results = () => {
   const resultsData = {
     'GCSE': {
       '2024': [
-        { name: 'Student K', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student L', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student M', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student N', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student O', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student P', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student Q', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student R', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student S', physics: '9', chemistry: '9', biology: '9', mathematics: '9' },
-        { name: 'Student T', physics: '9', chemistry: '9', biology: '9', mathematics: '9' }
+        { name: 'Student K', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student L', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student M', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student N', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student O', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student P', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student Q', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student S', physics: '9', chemistry: '9', biology: '9' },
+        { name: 'Student T', physics: '9', chemistry: '9', biology: '9' }
       ],
       '2023': [
-        { name: 'AJ', chemistry: '9', biology: '9', physics: '9', mathematics: '9' },
-        { name: 'BJ', chemistry: '8', biology: '9', physics: '8', mathematics: '9' },
-        { name: 'AL', chemistry: '9', biology: '9', physics: '9', mathematics: '9' },
-        { name: 'AM', chemistry: '9', biology: '8', physics: '9', mathematics: '8' },
-        { name: 'AN', chemistry: '8', biology: '8', physics: '8', mathematics: '8' },
-        { name: 'AO', chemistry: '9', biology: '9', physics: '8', mathematics: '9' },
-        { name: 'AP', chemistry: '8', biology: '9', physics: '9', mathematics: '8' },
-        { name: 'AQ', chemistry: '9', biology: '7', physics: '8', mathematics: '8' },
-        { name: 'AR', chemistry: '8', biology: '8', physics: '7', mathematics: '8' },
-        { name: 'AS', chemistry: '7', biology: '8', physics: '8', mathematics: '7' }
+        { name: 'AJ', chemistry: '9', biology: '9', physics: '9'},
+        { name: 'BJ', chemistry: '8', biology: '9', physics: '8' },
+        { name: 'AL', chemistry: '9', biology: '9', physics: '9' },
+        { name: 'AM', chemistry: '9', biology: '8', physics: '9' },
+        { name: 'AN', chemistry: '8', biology: '8', physics: '8' },
+        { name: 'AO', chemistry: '9', biology: '9', physics: '8' },
+        { name: 'AP', chemistry: '8', biology: '9', physics: '9' },
+        { name: 'AQ', chemistry: '9', biology: '7', physics: '8' },
+        { name: 'AR', chemistry: '8', biology: '8', physics: '7' },
+        { name: 'AS', chemistry: '7', biology: '8', physics: '8' }
       ],
       '2022': [
         { name: 'RJ', chemistry: '9', biology: '9', physics: '9' },
@@ -298,9 +297,9 @@ const Results = () => {
                       <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Biology
                       </th>
-                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                      {/* <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Mathematics
-                      </th>
+                      </th> */}
                     </>
                   ) : (
                     <>
@@ -313,9 +312,9 @@ const Results = () => {
                       <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Biology
                       </th>
-                      <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                      {/* <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Mathematics
-                      </th>
+                      </th> */}
                     </>
                   )}
                 </tr>
